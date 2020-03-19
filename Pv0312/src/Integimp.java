@@ -21,8 +21,14 @@ public class Integimp implements Integ {
 	public void menu() {
 		// 로그인 여부 체크, 어드민인지 여부 체크 >> 메인 노출 달라
 		System.out.println("=======[쇼핑몰 메인 화면]=======");
-		System.out.println("1. 회원가입");
-		System.out.println("2. 로그인");
+		if(login.isEmpty()) {
+			System.out.println("1. 회원가입");			
+		} 
+		if(login.isEmpty()) {
+			System.out.println("2. 로그인");			
+		} else {
+			System.out.println("2. 로그아웃");
+		}
 		System.out.println("3. 상품구매");
 		System.out.println("4. 장바구니");
 		System.out.println("5. 회원정보");
@@ -38,6 +44,14 @@ public class Integimp implements Integ {
 
 	@Override
 	public void registor() {
+		
+		//로그인 상태로 회원가입 접근 시
+		if(!(login.isEmpty())) {
+			System.out.println("잘못된 접근입니다.");
+			return;
+		}
+		
+		//정상접근(로그인 하지 않은 상태)
 		String id;
 		String pw;
 		String pw2;
@@ -184,7 +198,7 @@ public class Integimp implements Integ {
 	@Override
 	public void buy() {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override

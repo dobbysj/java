@@ -28,7 +28,7 @@ public class Mall {
 				i.loginout();
 				break;
 			case "3":
-				
+				//상품구매(장바구니 담기)
 				break;
 			case "4":
 				
