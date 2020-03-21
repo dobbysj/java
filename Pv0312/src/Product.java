@@ -5,25 +5,24 @@ public class Product {
 	String name;
 	int price;
 	double point;	
-	String color;
 	
 	{
 		serial = ++count;
 	}
 	
 	Product(){}
-	Product(String name, int price, String color){
+	Product(String name, int price){
 		this.name=name;
 		this.price=price;
 		point = price*0.1;
-		this.color=color;
 	}
 }
-
 
 //아이폰 클래스
 class Iphone extends Product{
 	String size;
+	String color;
+	
 }
 
 class IphoneX extends Iphone{

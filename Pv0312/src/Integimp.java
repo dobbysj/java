@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 public class Integimp implements Integ {
 
 	ArrayList<Member> member = new ArrayList<Member>();
+	ArrayList<Product> product = new ArrayList<Product>();
 	HashMap<String, String> login = new HashMap<String, String>();
 	Scanner scan = new Scanner(System.in);
 	public static final String pattern1 = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&])[A-Za-z[0-9]$@$!%*#?&]{8,20}$"; 
@@ -194,6 +195,11 @@ public class Integimp implements Integ {
 		login.put(id, pw);
 	}
 
+	@Override
+	public void product_list() {
+		
+		
+	}
 
 	@Override
 	public void buy() {
@@ -230,5 +236,6 @@ public class Integimp implements Integ {
 		// TODO Auto-generated method stub
 
 	}
+
 
 }
